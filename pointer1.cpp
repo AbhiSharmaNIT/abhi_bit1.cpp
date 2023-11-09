@@ -1,22 +1,30 @@
-//Ques.- How to print value of pointer and how to update this value in the program?
-#include<iostream>
+//                             1. basic of pointer
+
+#include <iostream>
 using namespace std;
 
-int main(){
+int main()
+{
+    int n = 5;         // take a value
+    cout << n << endl; // print the value
 
-    int a=18;
-    int *aptr = &a;    //we store the value by adress   
-    //                  position of * is anywhere but only in backward direction 
+    cout << "Address of n : " << &n << endl; // print the location of memory block as address
+    cout << "Size of n : " << sizeof(n) << endl
+         << endl; // size of integer type
 
-    cout<<"Value of a is : "<<*aptr<<endl;  //output : 15
-    a = 20;
+    int *ptr = &n; // make pointer which is store the values of address
 
-    cout<<"New value of a is : "<<a<<endl;   //output : 20
-    cout<<*aptr<<endl;   //output : 20        // Or we can use  :   cout<<*aptr; and we are // getting same value,
+    cout << "Now Address is : " << ptr << endl; // printing address location
+    cout << "Value is : " << *ptr << endl;      // printing value through pointer
+    cout << "Size of pointer is : " << sizeof(ptr) << endl
+         << endl; // printing size of pointer
 
-    cout<<"Garbez value is : "<<&a;   //that means to get random value which is stored in memory                                                                   
+    double d = 4.3; // taking another type of datatype
+    double *p = &d;
+
+    cout << "Now Adress is : " << p << endl;
+    cout << "Value is : " << *p << endl;
+    cout << "Size of pointer is : " << sizeof(p);
+
     return 0;
-
 }
-
-
